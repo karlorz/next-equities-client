@@ -12,7 +12,7 @@ import {
 export const labels = [
   {
     value: 'bug',
-    label: 'Bug',
+    label: 'Bug999',
   },
   {
     value: 'feature',
