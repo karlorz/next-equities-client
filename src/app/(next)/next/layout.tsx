@@ -3,9 +3,9 @@
 import { MainNav } from '@/components/main-nav';
 import { ModeToggle } from '@/components/mode-toggle';
 import { SignInButton } from '@/components/sign-in-button';
-import { UserAccountNav } from '@/components/user-account-nav';
+// import { UserAccountNav } from '@/components/user-account-nav';
 import { dashboardConfig } from '@/config/dashboard';
-import { getCurrentUser } from '@/lib/session';
+// import { getCurrentUser } from '@/lib/session';
 
 interface DashboardLayoutProps {
   children?: React.ReactNode;
@@ -14,7 +14,7 @@ interface DashboardLayoutProps {
 export default async function DashboardLayout({
   children,
 }: DashboardLayoutProps) {
-  const user = await getCurrentUser();
+  // const user = await getCurrentUser();
 
   // if (!user) {
   //   return notFound();
@@ -29,7 +29,7 @@ export default async function DashboardLayout({
           </div>
           <div className="flex items-center">
             <ModeToggle />
-            {user ? (
+            {/* {user ? (
               <UserAccountNav
                 user={{
                   name: user.name,
@@ -39,7 +39,8 @@ export default async function DashboardLayout({
               />
             ) : (
               <SignInButton />
-            )}
+            )} */}
+            <SignInButton />
           </div>
         </div>
       </header>

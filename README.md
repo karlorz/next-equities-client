@@ -1,61 +1,38 @@
-<a href="https://next-starter-skolaczk.vercel.app/">
-<img src="https://github.com/Skolaczk/next-starter/assets/76774237/44b552ff-43aa-441f-b1d0-de9bdfc2a73f" alt="thubnail">
-</a>
-<p align="center">
-  <a href="#-features"><strong>Features</strong></a> ·
-  <a href="#-deployment"><strong>Deployment</strong></a> ·
-  <a href="#-getting-started"><strong>Getting started</strong></a> ·
-  <a href="#%EF%B8%8F-scripts-overview"><strong>Scripts overview</strong></a> ·
-  <a href="#-contribution"><strong>Contribution</strong></a> ·
-  <a href="#%EF%B8%8F-support"><strong>Support</strong></a>
-</p>
+## Perform Metric for Stock Portfolio
 
-## 🎉 Features
-- 🚀 Next.js 14 (App router)
-- ⚛️ React 18
-- 📘 Typescript
-- 🎨 TailwindCSS - Class sorting, merging and linting
-- 🛠️ Shadcn/ui - Customizable UI components
-- 🔒 Next-auth - Easy authentication library for Next.js (GitHub provider)
-- 🛡️ Prisma - ORM for node.js
-- 📋 React-hook-form - Manage your forms easy and efficient 
-- 🔍 Zod - Schema validation library
-- 🧪 Jest & React Testing Library - Configured for unit testing
-- 🎭 Playwright - Configured for e2e testing
-- 📈 Absolute Import & Path Alias - Import components using `@/` prefix
-- 💅 Prettier - Code formatter
-- 🧹 Eslint - Code linting tool
-- 🐶 Husky & Lint Staged - Run scripts on your staged files before they are committed
-- 🔹 Icons - From Lucide
-- 🌑 Dark mode - With next-themes
-- 🗺️ Sitemap & robots.txt - With next-sitemap
-- 📝 Commitlint - Lint your git commits
-- 🤖 Github actions - Lint your code on PR
-- ⚙️ T3-env - Manage your environment variables
-- 💯 Perfect Lighthouse score
+## Expected result
+At the first page, you can add, edit, delete and compute the perform metric. For demo, I typical select CAR25 from the book of Dr. Howard Bandy - Quantitative Technical Analysist. Also compute the Correlation coefficient to the market, preset to "spy".
+
+* Click on the Equity Curve to check the 10 equally likely equity curves from the Monte Carlos simulation:
+
+* Equity Curve at Safe F.
+
+## Terms
+
+CAR25 is a conservative metric that can be used to compare alternative uses of funds.  It is the compound annual rate of return for the risk normalized profit at the 25th percentile of the distribution
+
+SAFEF is the fixed percentage position size at the trade system.
+
+## Assumptions and Limitations
+
+During calculation, assume:
+* the position sizing can be more than 100% of account, maximum is 400%,
+* 0 interest rate,
+* buy with fixed fractional position sizing every trades everyday,
+* commission omit
 
 ## 🚀 Deployment
 Easily deploy your Next.js app with <a href="https://vercel.com/">Vercel</a> by clicking the button below:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Skolaczk/next-starter)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/karlorz/next-equities-client)
 
-## 🎯 Getting started
-### 1. Clone this template in one of three ways
-
-1. Using this repository as template
-
-   ![use-this-template-button](https://github.com/Skolaczk/next-starter/assets/76774237/f25c9a29-41de-4865-aa38-c032b9346169)
-
-2. Using `create-next-app`
-
-   ```bash
-   npx create-next-app -e https://github.com/Skolaczk/next-starter my-project-name
-   ```
+## 🎯 App Fork
+### 1. Clone this template
     
-3. Using `git clone`
+1. Using `git clone`
 
    ```bash
-   git clone https://github.com/Skolaczk/next-starter my-project-name
+   git clone 
    ```
 ### 2. Install dependencies
 
@@ -100,17 +77,3 @@ The following scripts are available in the `package.json`:
 - `e2e:ui`: Run end-to-end tests with UI
 - `postbuild`: Generate sitemap
 - `prepare`: Install Husky for managing Git hooks
-
-## 🤝 Contribution
-To contribute, please follow these steps:
-1. Fork the repository.
-2. Create a new branch.
-3. Make your changes, and commit them.
-4. Push your changes to the forked repository.
-5. Create a pull request.
-
-## ❤️ Support
-
-If you liked the project, I will appreciate if you leave a star. 🌟😊
-
-Made by <a href="https://michalskolak.netlify.app/">Michał Skolak</a> 
