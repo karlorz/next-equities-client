@@ -22,7 +22,7 @@ const Home = () => {
         </Button>
         <Button variant="outline" asChild>
           <a href="#">
-            <Icons.github className="mr-2 size-4" /> Github
+            <Icons.gitHub className="mr-2 size-4" /> Github
           </a>
         </Button>
       </div>

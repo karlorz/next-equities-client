@@ -1,7 +1,7 @@
 import { auth } from 'auth';
 import { SessionProvider } from 'next-auth/react';
 
-import ClientExample from '@/components/client-example';
+import ClientExample from '@/app/(test)/components/client-example';
 
 export default async function ClientPage() {
   const session = await auth();

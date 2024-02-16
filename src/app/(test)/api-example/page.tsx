@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 
-import CustomLink from '@/components/custom-link';
+import CustomLink from '@/app/(test)/components/custom-link';
 
 export default function Page() {
   const [data, setData] = useState();

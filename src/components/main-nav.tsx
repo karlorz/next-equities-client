@@ -1,84 +1,61 @@
 'use client';
 
-import React from 'react';
-import Image from 'next/image';
+import * as React from 'react';
+import Link from 'next/link';
+import { useSelectedLayoutSegment } from 'next/navigation';
+import { MainNavItem } from 'types';
 
-import CustomLink from './custom-link';
-import { Button } from './ui/button';
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from './ui/navigation-menu';
-
+import { Icons } from '@/components/icons';
+import { MobileNav } from '@/components/mobile-nav';
+import { siteConfig } from '@/config/constant';
 import { cn } from '@/lib/utils';
 
-export function MainNav() {
+interface MainNavProps {
+  items?: MainNavItem[];
+  children?: React.ReactNode;
+}
+
+export function MainNav({ items, children }: MainNavProps) {
+  const segment = useSelectedLayoutSegment();
+  const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
+
   return (
-    <div className="flex items-center space-x-2 lg:space-x-6">
-      <CustomLink href="/">
-        <Button variant="ghost" className="p-0">
-          <Image src="/logo.png" alt="Home" width="32" height="32" />
-        </Button>
-      </CustomLink>
-      <NavigationMenu>
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Server Side</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                <ListItem href="/server-example" title="RSC Example">
-                  Protecting React Server Component.
-                </ListItem>
-                <ListItem href="/middleware-example" title="Middleware Example">
-                  Using Middleware to protect pages & APIs.
-                </ListItem>
-                <ListItem href="/api-example" title="Route Handler Example">
-                  Getting the session inside an API Route.
-                </ListItem>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuLink
-              href="/client-example"
-              className={navigationMenuTriggerStyle()}
+    <div className="flex gap-6 md:gap-10">
+      <Link href="/" className="hidden items-center space-x-2 md:flex">
+        <Icons.logo />
+        <span className="hidden font-bold sm:inline-block">
+          {siteConfig.name}
+        </span>
+      </Link>
+      {items?.length ? (
+        <nav className="hidden gap-6 md:flex">
+          {items?.map((item, index) => (
+            <Link
+              key={index}
+              href={item.disabled ? '#' : item.href}
+              className={cn(
+                'flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm',
+                item.href.startsWith(`/${segment}`)
+                  ? 'text-foreground'
+                  : 'text-foreground/60',
+                item.disabled && 'cursor-not-allowed opacity-80'
+              )}
             >
-              Client Side
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
+              {item.title}
+            </Link>
+          ))}
+        </nav>
+      ) : null}
+      <button
+        className="flex items-center space-x-2 md:hidden"
+        onClick={() => setShowMobileMenu(!showMobileMenu)}
+      >
+        {showMobileMenu ? <Icons.close /> : <Icons.logo />}
+        <span className="font-bold">Menu</span>
+      </button>
+      {showMobileMenu && items && (
+        <MobileNav items={items}>{children}</MobileNav>
+      )}
     </div>
   );
 }
-
-const ListItem = React.forwardRef<
-  React.ElementRef<'a'>,
-  React.ComponentPropsWithoutRef<'a'>
->(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            'hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors',
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  );
-});
-ListItem.displayName = 'ListItem';

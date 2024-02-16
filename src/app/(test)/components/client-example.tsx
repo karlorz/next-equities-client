@@ -4,10 +4,10 @@
 import { useState } from 'react';
 import { useSession } from 'next-auth/react';
 
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import CustomLink from './custom-link';
 import SessionData from './session-data';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
 
 const UpdateForm = () => {
   const { data: session, update } = useSession();

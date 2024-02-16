@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 
 const Home = () => {
   return (
-    <section className="container mt-10 flex flex-col items-center gap-3 text-center md:absolute md:left-1/2 md:top-1/2 md:mt-0 md:-translate-x-1/2 md:-translate-y-1/2">
+    <section className="container fixed inset-y-0 mt-20 flex flex-col items-center gap-3 overflow-x-auto text-center md:absolute md:left-1/2 md:top-1/2 md:mt-0 md:-translate-x-1/2 md:-translate-y-1/2">
       <h1 className="mb-1 font-mono text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
         next-equities
       </h1>
@@ -14,6 +14,9 @@ const Home = () => {
       </div>
       <div className="mt-2 flex gap-4">
         <Button asChild>
+          <a href="/next">next</a>
+        </Button>
+        <Button asChild>
           <a href="/tasksplay">tasks</a>
         </Button>
         <Button asChild>
@@ -21,7 +24,7 @@ const Home = () => {
         </Button>
         <Button variant="outline" asChild>
           <a href="#">
-            <Icons.github className="mr-2 size-4" /> Github
+            <Icons.gitHub className="mr-2 size-4" /> Github
           </a>
         </Button>
       </div>

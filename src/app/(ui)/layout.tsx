@@ -4,18 +4,18 @@ import { PropsWithChildren } from 'react';
 import type { Metadata } from 'next';
 
 import { Footer } from '@/components/footer';
-import { Navbar } from '@/components/navbar/navbar';
+import { Navbar } from '@/app/(begin_test)/starter/components/navbar/navbar';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
-import { siteConfig } from '@/lib/constant';
+import { siteConfig } from '@/config/constant';
 import { fonts } from '@/lib/fonts';
 import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: siteConfig.title,
-    template: `%s | ${siteConfig.title}`,
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   keywords: siteConfig.keywords,
@@ -30,16 +30,16 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: siteConfig.url,
-    title: siteConfig.title,
+    title: siteConfig.name,
     description: siteConfig.description,
-    siteName: siteConfig.title,
+    siteName: siteConfig.name,
     images: '/opengraph-image.png',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: siteConfig.title,
+    title: siteConfig.name,
     description: siteConfig.description,
     images: '/opengraph-image.png',
   },

@@ -1,7 +1,7 @@
 import { auth } from 'auth';
 
-import CustomLink from '@/components/custom-link';
-import SessionData from '@/components/session-data';
+import CustomLink from '@/app/(test)/components/custom-link';
+import SessionData from '@/app/(test)/components/session-data';
 
 export default async function Page() {
   const session = await auth();
