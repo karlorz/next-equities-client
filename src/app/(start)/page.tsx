@@ -17,10 +17,10 @@ const Home = () => {
           <a href="/next">next</a>
         </Button>
         <Button asChild>
-          <a href="/tasksplay">tasks</a>
+          <a href="/starter">starter</a>
         </Button>
         <Button asChild>
-          <a href="/server-example">authjs</a>
+          <a href="/tasksplay">tasks</a>
         </Button>
         <Button variant="outline" asChild>
           <a href="#">

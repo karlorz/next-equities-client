@@ -5,7 +5,6 @@ import type { Metadata } from 'next';
 
 import AuthContext from './AuthContext';
 
-// import { MainNav } from './starter/components/navbar/mainnav';
 import { Footer } from '@/components/footer';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
@@ -53,7 +52,6 @@ const RootLayout = ({ children }: PropsWithChildren) => {
       <body className={cn('min-h-screen font-sans', fonts)}>
         <ThemeProvider attribute="class">
           <Toaster />
-          {/* <MainNav /> */}
           <AuthContext>{children}</AuthContext>
           <Footer />
         </ThemeProvider>
