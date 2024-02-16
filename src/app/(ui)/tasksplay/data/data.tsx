@@ -9,10 +9,25 @@ import {
   StopwatchIcon,
 } from '@radix-ui/react-icons';
 
+export const columnstitles = [
+  {
+    value: 'title',
+    label: 'title',
+  },
+  {
+    value: 'status',
+    label: 'Status',
+  },
+  {
+    value: 'priority',
+    label: 'Priority',
+  },
+];
+
 export const labels = [
   {
     value: 'bug',
-    label: 'Bug999',
+    label: 'Bug',
   },
   {
     value: 'feature',

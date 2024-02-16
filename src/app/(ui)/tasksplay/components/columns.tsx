@@ -2,7 +2,7 @@
 
 import { ColumnDef } from '@tanstack/react-table';
 
-import { labels, priorities, statuses } from '../data/data';
+import { columnstitles, labels, priorities, statuses } from '../data/data';
 import { Task } from '../data/schema';
 import { DataTableColumnHeader } from './data-table-column-header';
 import { DataTableRowActions } from './data-table-row-actions';
@@ -46,9 +46,13 @@ export const columns: ColumnDef<Task>[] = [
   },
   {
     accessorKey: 'title',
-    header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Title" />
-    ),
+    header: ({ column }) => {
+      const titlelabel = columnstitles.find((label) => label.value === 'title');
+      if (!titlelabel) {
+        return null;
+      }
+      return <DataTableColumnHeader column={column} title={titlelabel.label} />;
+    },
     cell: ({ row }) => {
       const label = labels.find((label) => label.value === row.original.label);
 
