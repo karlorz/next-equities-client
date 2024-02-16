@@ -5,6 +5,8 @@ on:
       - main
       - master
       - develop
+      - feature/*
+      - dev
   pull_request: null
   workflow_dispatch: null
 

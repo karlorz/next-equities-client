@@ -18,16 +18,11 @@ const Home = () => {
       </div>
       <div className="mt-2 flex gap-4">
         <Button asChild>
-          <a
-            href="https://github.com/Skolaczk/next-starter/blob/main/README.md#getting-started"
-            target="_blank"
-          >
-            Get Started
-          </a>
+          <a href="/server-example">Get Started</a>
         </Button>
         <Button variant="outline" asChild>
-          <a href="https://github.com/Skolaczk/next-starter" target="_blank">
-            <Icons.github className="mr-2 size-4" /> Github
+          <a href="#">
+            <Icons.gitHub className="mr-2 size-4" /> Github
           </a>
         </Button>
       </div>

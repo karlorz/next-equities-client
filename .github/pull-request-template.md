@@ -1,6 +1,6 @@
 ### Issue 😱:
 
-Closes https://github.com/Skolaczk/next-starter/issues
+Closes https://github.com/karlorz/next-equities-client/issues
 
 ### What has been done ✅:
 
