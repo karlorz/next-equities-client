@@ -3,6 +3,8 @@
 import React from 'react';
 import Image from 'next/image';
 
+import CustomLink from './custom-link';
+
 import { Button } from '@/components/ui/button';
 import {
   NavigationMenu,
@@ -13,8 +15,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
-import CustomLink from './custom-link';
-
 import { cn } from '@/lib/utils';
 
 export function MainNav() {

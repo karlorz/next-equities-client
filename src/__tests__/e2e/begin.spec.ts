@@ -5,5 +5,5 @@ import { siteConfig } from '@/config/constant';
 test('has title', async ({ page }) => {
   await page.goto('/starter');
 
-  await expect(page).toHaveTitle(siteConfig.title);
+  await expect(page).toHaveTitle(siteConfig.name);
 });
