@@ -4,7 +4,6 @@ import UserNav from './components/user-nav';
 
 import { MainNav } from '@/components/main-nav';
 import { ModeToggle } from '@/components/mode-toggle';
-import { SignInButton } from '@/components/sign-in-button';
 import { dashboardConfig } from '@/config/dashboard';
 
 interface DashboardLayoutProps {
@@ -29,9 +28,7 @@ export default async function DashboardLayout({
           </div>
           <div className="flex items-center">
             <ModeToggle />
-
             <UserNav />
-
           </div>
         </div>
       </header>
