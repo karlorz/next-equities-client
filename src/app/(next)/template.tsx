@@ -1,11 +1,11 @@
 // import { notFound } from 'next/navigation';
 
+import UserNav from './components/user-nav';
+
 import { MainNav } from '@/components/main-nav';
 import { ModeToggle } from '@/components/mode-toggle';
 import { SignInButton } from '@/components/sign-in-button';
-// import { UserAccountNav } from '@/components/user-account-nav';
 import { dashboardConfig } from '@/config/dashboard';
-// import { getCurrentUser } from '@/lib/session';
 
 interface DashboardLayoutProps {
   children?: React.ReactNode;
@@ -29,18 +29,9 @@ export default async function DashboardLayout({
           </div>
           <div className="flex items-center">
             <ModeToggle />
-            {/* {user ? (
-              <UserAccountNav
-                user={{
-                  name: user.name,
-                  image: user.image,
-                  email: user.email,
-                }}
-              />
-            ) : (
-              <SignInButton />
-            )} */}
-            <SignInButton />
+
+            <UserNav />
+
           </div>
         </div>
       </header>
