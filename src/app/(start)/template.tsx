@@ -4,7 +4,7 @@ import { MainNav } from '@/components/main-nav';
 import { ModeToggle } from '@/components/mode-toggle';
 import { SignInButton } from '@/components/sign-in-button';
 // import { UserAccountNav } from '@/components/user-account-nav';
-import { dashboardConfig } from '@/config/dashboard';
+import { heroConfig } from '@/config/dashboard';
 // import { getCurrentUser } from '@/lib/session';
 
 interface DashboardLayoutProps {
@@ -25,7 +25,7 @@ export default async function DashboardLayout({
       <header className="bg-background sticky top-0 z-40 border-b">
         <div className="container flex h-16 items-center justify-between py-4">
           <div className="flex items-center">
-            <MainNav items={dashboardConfig.mainNav} />
+            <MainNav items={heroConfig.mainNav} />
           </div>
           <div className="flex items-center">
             <ModeToggle />

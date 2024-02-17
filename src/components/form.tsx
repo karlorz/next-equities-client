@@ -28,7 +28,8 @@ export const HeroForm = () => {
 
   const onSubmit = async ({ name }: FormSchema) => {
     // const { message } = await helloAction(name);
-    toast({ description: name });
+    const message = `Hello, ${name}`;
+    toast({ description: message });
   };
 
   return (

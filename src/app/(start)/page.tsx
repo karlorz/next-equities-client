@@ -9,10 +9,10 @@ const Home = () => {
         next-equities
       </h1>
 
-      <div className="mt-1">
-        <HeroForm />
-      </div>
       <div className="mt-2 flex gap-4">
+        <Button asChild>
+          <a href="/watchlist">watchlist</a>
+        </Button>
         <Button asChild>
           <a href="/next">next</a>
         </Button>
@@ -27,6 +27,10 @@ const Home = () => {
             <Icons.gitHub className="mr-2 size-4" /> Github
           </a>
         </Button>
+      </div>
+
+      <div className="mt-1">
+        <HeroForm />
       </div>
     </section>
   );

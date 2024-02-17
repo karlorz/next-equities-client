@@ -18,11 +18,11 @@ export const nextConfig: DashboardConfig = {
   ],
 };
 
-export const dashboardConfig: DashboardConfig = {
+export const heroConfig: DashboardConfig = {
   mainNav: [
     {
-      title: 'Documentation',
-      href: '/docs',
+      title: 'Watchlist',
+      href: '/watchlist',
     },
     {
       title: 'Support',

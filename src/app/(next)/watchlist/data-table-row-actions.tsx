@@ -2,6 +2,7 @@
 
 import { DotsHorizontalIcon } from '@radix-ui/react-icons';
 import { Row } from '@tanstack/react-table';
+import Link from 'next/link';
 
 // import { labels } from './data';
 import { watchlistSchema } from './data/schema';
@@ -25,6 +26,7 @@ export function DataTableRowActions<TData>({
   row,
 }: DataTableRowActionsProps<TData>) {
   const watchlist = watchlistSchema.parse(row.original);
+  const encodedSystem = encodeURIComponent(watchlist.issue);
 
   const { mutate } = useDeleteWatchlist();
 
@@ -44,9 +46,9 @@ export function DataTableRowActions<TData>({
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-[160px]">
-        <DropdownMenuItem>Edit</DropdownMenuItem>
-        <DropdownMenuItem>Make a copy</DropdownMenuItem>
-        <DropdownMenuItem>Favorite</DropdownMenuItem>
+        <Link href={`/chart/${encodedSystem}`}>
+          <DropdownMenuItem>Chart</DropdownMenuItem>
+        </Link>
         <DropdownMenuSeparator />
         <DropdownMenuItem onSelect={handleDelete}>
           Delete
