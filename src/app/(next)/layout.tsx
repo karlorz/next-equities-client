@@ -53,7 +53,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
         <ThemeProvider attribute="class">
           <Toaster />
           <AuthContext>{children}</AuthContext>
-          <Footer />
+          {/* <Footer /> */}
         </ThemeProvider>
       </body>
     </html>

@@ -11,7 +11,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuRadioGroup,
+  // DropdownMenuRadioGroup,
   // DropdownMenuRadioItem,
   DropdownMenuSeparator,
   DropdownMenuShortcut,
@@ -47,15 +47,15 @@ export function DataTableRowActions<TData>({
         <DropdownMenuItem>Favorite</DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuSub>
-          <DropdownMenuSubTrigger>Labels</DropdownMenuSubTrigger>
+          <DropdownMenuSubTrigger>{watchlist.createdBy}</DropdownMenuSubTrigger>
           <DropdownMenuSubContent>
-            <DropdownMenuRadioGroup value={watchlist.createby}>
-              {/* {labels.map((label) => (
+            {/* <DropdownMenuRadioGroup value={watchlist.createdBy}>
+              {labels.map((label) => (
                 <DropdownMenuRadioItem key={label.value} value={label.value}>
                   {label.label}
                 </DropdownMenuRadioItem>
-              ))} */}
-            </DropdownMenuRadioGroup>
+              ))}
+            </DropdownMenuRadioGroup> */}
           </DropdownMenuSubContent>
         </DropdownMenuSub>
         <DropdownMenuSeparator />

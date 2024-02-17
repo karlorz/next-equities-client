@@ -67,6 +67,21 @@ export const columns: ColumnDef<Watchlist>[] = [
     },
   },
   {
+    accessorKey: 'createdBy',
+    header: ({ column }) => {
+      const titlelabel = columnstitles.find(
+        (label) => label.value === 'createdBy'
+      );
+      if (!titlelabel) {
+        return 'createdBy';
+      }
+      return <DataTableColumnHeader column={column} title={titlelabel.label} />;
+    },
+    cell: ({ row }) => (
+      <div className="w-[80px]">{row.getValue('createdBy')}</div>
+    ),
+  },
+  {
     id: 'actions',
     cell: ({ row }) => <DataTableRowActions row={row} />,
   },
