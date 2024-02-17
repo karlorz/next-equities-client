@@ -1,19 +1,23 @@
+export interface WatchlistPostDto {
+  id?: number;
+  issue: string;
+}
 export interface WatchlistDto {
-  id?: string;
+  id: number;
   issue: string;
 
-  createdAt?: string;
-  createdBy?: string;
-  lastModified?: string;
-  lastModifiedBy?: string;
+  createdAt: string;
+  createdBy: number;
+  lastModified: string;
+  lastModifiedBy: string;
 }
 
 export interface Watchlist {
-  id?: string;
+  id: number;
   issue: string;
 
-  createdAt?: string;
-  createdBy?: string;
-  updatedAt?: string;
-  lastModifiedBy?: string;
+  createdAt: string;
+  createdBy: number;
+  updatedAt: string;
+  lastModifiedBy: string;
 }

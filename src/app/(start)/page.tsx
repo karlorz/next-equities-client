@@ -19,9 +19,6 @@ const Home = () => {
         <Button asChild>
           <a href="/starter">starter</a>
         </Button>
-        <Button asChild>
-          <a href="/tasksplay">tasks</a>
-        </Button>
         <Button variant="outline" asChild>
           <a href="#">
             <Icons.gitHub className="mr-2 size-4" /> Github

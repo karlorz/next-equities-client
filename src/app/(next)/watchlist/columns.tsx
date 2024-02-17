@@ -3,12 +3,13 @@
 import { ColumnDef } from '@tanstack/react-table';
 
 import { columnstitles } from './data/data';
-import { Watchlist } from './data/schema';
 import { DataTableRowActions } from './data-table-row-actions';
 
 import { DataTableColumnHeader } from '@/components/data-table-column-header';
 // import { Badge } from '@/components/ui/badge';
 import { Checkbox } from '@/components/ui/checkbox';
+// import { Watchlist } from './data/schema';
+import { Watchlist } from '@/types/watchlist/watachlist';
 
 export const columns: ColumnDef<Watchlist>[] = [
   {

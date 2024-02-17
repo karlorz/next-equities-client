@@ -1,5 +1,6 @@
 'use client';
 
+import { ColumnDef } from '@tanstack/react-table';
 import { useRouter } from 'next/navigation';
 
 import { columns } from './columns';
@@ -46,7 +47,12 @@ const List: React.FC<ListProps> = ({ watchlists }) => {
             </Button>
           </div>
         </div>
-        <DataTable data={watchlist || []} columns={columns} />
+        <DataTable
+          data={watchlist || []}
+          columns={
+            columns as ColumnDef<Watchlist | null | undefined, unknown>[]
+          }
+        />
       </div>
     </div>
   );

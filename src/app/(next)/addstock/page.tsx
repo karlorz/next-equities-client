@@ -39,9 +39,10 @@ const AddStockPage = () => {
             required
             className={cn('md:w-20')}
           />
-          <Button type="submit" disabled={mutation.isLoading} className="ml-2">
+          <Button type="submit" className="ml-2">Add Stock</Button>
+          {/* <Button type="submit" disabled={mutation.isLoading} className="ml-2">
             {mutation.isLoading ? 'Adding...' : 'Add Stock'}
-          </Button>
+          </Button> */}
         </div>
       </form>
     </div>
