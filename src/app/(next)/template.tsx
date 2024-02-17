@@ -1,10 +1,8 @@
-// import { notFound } from 'next/navigation';
-
 import UserNav from './components/user-nav';
 
 import { MainNav } from '@/components/main-nav';
 import { ModeToggle } from '@/components/mode-toggle';
-import { dashboardConfig } from '@/config/dashboard';
+import { nextConfig } from '@/config/dashboard';
 
 interface DashboardLayoutProps {
   children?: React.ReactNode;
@@ -24,7 +22,7 @@ export default async function DashboardLayout({
       <header className="bg-background sticky top-0 z-40 border-b">
         <div className="container flex h-16 items-center justify-between py-4">
           <div className="flex items-center">
-            <MainNav items={dashboardConfig.mainNav} />
+            <MainNav items={nextConfig.mainNav} />
           </div>
           <div className="flex items-center">
             <ModeToggle />
@@ -32,7 +30,7 @@ export default async function DashboardLayout({
           </div>
         </div>
       </header>
-      <div className="container grid flex-1 gap-12 md:grid-cols-[200px_1fr]">
+      <div className="container mx-auto flex-1 gap-12">
         <main className="flex w-full flex-1 flex-col overflow-hidden">
           {children}
         </main>
