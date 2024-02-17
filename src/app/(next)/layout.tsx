@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 
 import AuthContext from './AuthContext';
 
-import { Footer } from '@/components/footer';
+// import { Footer } from '@/components/footer';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
 import { siteConfig } from '@/config/constant';
