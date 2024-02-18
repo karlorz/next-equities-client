@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
-import { Watchlist } from '@/types/watchlist/watachlist';
+// import { Watchlist } from '@/types/watchlist/watachlist';
 
 export const QUERY_TEST = 'QUERY_TEST';
 
@@ -10,8 +10,11 @@ const queryWatchlist = async () => {
   //   data: WatchlistDto[];
   // }>('/api/v1/watchlists');
   // return response.data?.data?.map((watachlistDto) => toModel(watachlistDto));
-  const response = await axios.get(`${process.env.API_PATH}/v1/watchlists`);
-  const watchlists = response.data as Watchlist[];
+  const response = await axios.get(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/v1/watchlists`
+  );
+  // const watchlists = response.data as Watchlist[];
+  const watchlists = response.data;
   return watchlists;
 };
 
