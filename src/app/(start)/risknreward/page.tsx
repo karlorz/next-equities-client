@@ -1,4 +1,3 @@
-
 const Page = () => {
   return (
     <section className="container mx-auto mb-10 mt-20 md:absolute md:left-1/2 md:top-1/3 md:-translate-x-1/2 md:-translate-y-1/3">
