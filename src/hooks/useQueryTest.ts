@@ -10,11 +10,11 @@ const queryWatchlist = async () => {
   //   data: WatchlistDto[];
   // }>('/api/v1/watchlists');
   // return response.data?.data?.map((watachlistDto) => toModel(watachlistDto));
-  const response = await axios.get(
+  const response = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/api/v1/watchlists`
   );
   // const watchlists = response.data as Watchlist[];
-  const watchlists = response.data;
+  const watchlists = response.json();
   return watchlists;
 };
 
