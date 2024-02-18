@@ -1,7 +1,9 @@
 ## Perform Metric for Stock Portfolio
-
+## Motivation
+Providing a comprehensive approach to evaluating the risk and rewards of investment portfolio. While most metric tools only present risk and rewards separately, I need a system combines these factors to give view of portfolio's performance.
 ## Expected result
-At the first page, you can add, edit, delete and compute the perform metric. For demo, I typical select CAR25 from the book of Dr. Howard Bandy - Quantitative Technical Analysist. Also compute the Correlation coefficient to the market, preset to "spy".
+At the watchlist page, you can add, edit, delete and compute the perform metric. For demo, I typical select CAR25 from the book of Dr. Howard Bandy - Quantitative Technical Analysist. Also compute the Correlation coefficient to the market, preset to "spy".
+Related article: [Risk and Reward](https://blueowlpress.com/system-development/all-things-being-equal-risk-and-reward/)
 
 * Click on the Equity Curve to check the 10 equally likely equity curves from the Monte Carlos simulation:
 
