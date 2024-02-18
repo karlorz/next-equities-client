@@ -8,25 +8,31 @@ const Home = () => {
       <h1 className="mb-1 font-mono text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
         next-equities
       </h1>
-
-      <div className="mt-1">
-        <HeroForm />
-      </div>
+      <p className="text-muted-foreground max-w-2xl">
+        Providing a comprehensive approach to evaluating the risk and rewards of
+        investment portfolio. While most metric tools only present risk and
+        rewards separately, we need a system combines these factors to give view
+        of portfolio&apos;s performance.
+      </p>
       <div className="mt-2 flex gap-4">
         <Button asChild>
-          <a href="/next">next</a>
+          <a href="/watchlist">watchlist</a>
         </Button>
         <Button asChild>
-          <a href="/tasksplay">tasks</a>
+          <a href="/chart/spy">chart by tw</a>
         </Button>
         <Button asChild>
-          <a href="/server-example">authjs</a>
+          <a href="/risknreward">introduction</a>
         </Button>
         <Button variant="outline" asChild>
-          <a href="#">
+          <a href="https://github.com/karlcc/next-equities-client">
             <Icons.gitHub className="mr-2 size-4" /> Github
           </a>
         </Button>
+      </div>
+
+      <div className="mt-1">
+        <HeroForm />
       </div>
     </section>
   );

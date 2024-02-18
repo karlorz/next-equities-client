@@ -3,7 +3,9 @@ import '@/styles/globals.css';
 import { PropsWithChildren } from 'react';
 import type { Metadata } from 'next';
 
-import { Navbar } from '@/app/(begin_test)/starter/components/navbar/navbar';
+import AuthContext from './AuthContext';
+
+// import { MainNav } from './starter/components/navbar/mainnav';
 import { Footer } from '@/components/footer';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
@@ -50,10 +52,10 @@ const RootLayout = ({ children }: PropsWithChildren) => {
     <html lang="en" suppressHydrationWarning>
       <body className={cn('min-h-screen font-sans', fonts)}>
         <ThemeProvider attribute="class">
-          <Navbar />
-          {children}
-          <Footer />
           <Toaster />
+          {/* <MainNav /> */}
+          <AuthContext>{children}</AuthContext>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

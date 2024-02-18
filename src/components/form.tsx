@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 
-import { helloAction } from '@/actions/hello-action';
+// import { helloAction } from '@/actions/hello-action';
 import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormField, FormItem } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
@@ -27,8 +27,8 @@ export const HeroForm = () => {
   const { toast } = useToast();
 
   const onSubmit = async ({ name }: FormSchema) => {
-    const { message } = await helloAction(name);
-
+    // const { message } = await helloAction(name);
+    const message = `Hello, ${name}`;
     toast({ description: message });
   };
 

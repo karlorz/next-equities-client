@@ -1,20 +1,8 @@
-import type { NextAuthConfig } from 'next-auth';
 import NextAuth from 'next-auth';
-import GitHub from 'next-auth/providers/github';
 
-export const config = {
-  theme: {
-    logo: 'https://next-auth.js.org/img/logo/logo-sm.png',
-  },
-  providers: [GitHub],
-  callbacks: {
-    authorized({ request, auth }) {
-      const { pathname } = request.nextUrl;
-      // if (pathname === '/middleware-example' || pathname === '/next')
-      if (pathname === '/middleware-example') return !!auth;
-      return true;
-    },
-  },
-} satisfies NextAuthConfig;
+import authConfig from './auth.config';
 
-export const { handlers, auth, signIn, signOut } = NextAuth(config);
+export const { handlers, auth, signIn, signOut } = NextAuth({
+  //   session: { strategy: "jwt" },
+  ...authConfig,
+});
