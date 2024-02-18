@@ -11,6 +11,10 @@ export const nextConfig: DashboardConfig = {
       href: '/addstock',
     },
     {
+      title: 'Chart',
+      href: '/chart/spy',
+    },
+    {
       title: 'Support',
       href: '/support',
       disabled: true,
@@ -23,6 +27,10 @@ export const heroConfig: DashboardConfig = {
     {
       title: 'Watchlist',
       href: '/watchlist',
+    },
+    {
+      title: 'Chart',
+      href: '/chart/spy',
     },
     {
       title: 'Support',
