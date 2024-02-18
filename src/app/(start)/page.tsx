@@ -19,7 +19,7 @@ const Home = () => {
           <a href="/watchlist">watchlist</a>
         </Button>
         <Button asChild>
-          <a href="/chart/spy">chart by tw</a>
+          <a href="/chart/spy">chart by tv</a>
         </Button>
         <Button asChild>
           <a href="/risknreward">introduction</a>
